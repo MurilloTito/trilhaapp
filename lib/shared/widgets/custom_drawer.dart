@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:trilhaapp/pages/login_page.dart';
+import 'package:trilhaapp/pages/posts_page.dart';
 
 import '../../pages/configuracoes/configuracoes_hive_page.dart';
 import '../../pages/dados_cadastrais/dados_cadastrais_hive.dart';
@@ -107,6 +108,22 @@ class CustomDrawer extends StatelessWidget {
                 Icon(Icons.numbers),
                 SizedBox(width: 5),
                 Text('Gerador de números'),
+              ],
+            ))),
+            const Divider(),
+            const SizedBox(height: 10),
+            InkWell(
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(context, 
+              MaterialPageRoute(
+                builder: (context) => const PostsPage()));
+            }, 
+            child: const SizedBox(width: double.infinity, child: Row(
+              children: [
+                Icon(Icons.post_add),
+                SizedBox(width: 5),
+                Text('Posts'),
               ],
             ))),
             const Divider(),

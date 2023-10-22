@@ -3,6 +3,7 @@ import 'package:trilhaapp/pages/card_page.dart';
 import 'package:trilhaapp/pages/pagina2.dart';
 import 'package:trilhaapp/pages/list_view_v.dart';
 import 'package:trilhaapp/pages/tarefa_page/tarefa_hive_page.dart';
+import 'package:trilhaapp/pages/consulta_cep.dart';
 
 import '../shared/widgets/custom_drawer.dart';
 import 'list_view_h.dart';
@@ -34,6 +35,7 @@ class _HomePageState extends State<HomePage> {
                   });
                 },
                 children: const [
+                ConsultaCEPPage(),
                 CardPage(),
                 Pagina2Page(),
                 ListViewVPage(),
@@ -50,18 +52,21 @@ class _HomePageState extends State<HomePage> {
               items: const [
               BottomNavigationBarItem(
                 label: 'Pag1',
-                icon: Icon(Icons.home)),
+                icon: Icon(Icons.http)),
               BottomNavigationBarItem(
                 label: 'Pag2',
-                icon: Icon(Icons.add)),
+                icon: Icon(Icons.home)),
               BottomNavigationBarItem(
                 label: 'Pag3',
-                icon: Icon(Icons.person)),
+                icon: Icon(Icons.add)),
               BottomNavigationBarItem(
                 label: 'Pag4',
-                icon: Icon(Icons.list)),
+                icon: Icon(Icons.person)),
               BottomNavigationBarItem(
                 label: 'Pag5',
+                icon: Icon(Icons.list)),
+              BottomNavigationBarItem(
+                label: 'Pag6',
                 icon: Icon(Icons.task)),
             ])
           ],
